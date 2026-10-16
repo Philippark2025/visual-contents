@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Visual Contents</title>
+  <meta property="og:title" content="Visual Contents">
+  <meta property="og:type" content="video.other">
+  <meta property="og:image" content="poster.jpg">
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; margin: 0; }
+    html, body { height: 100%; background: #0b0b0d; }
+    body {
+      display: grid;
+      place-items: center;
+      padding: 16px;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      color: #e8e8ea;
+    }
+    main { display: grid; gap: 12px; justify-items: center; width: 100%; }
+    video {
+      display: block;
+      height: min(86vh, 1920px);
+      max-width: 100%;
+      aspect-ratio: 9 / 16;
+      object-fit: contain;
+      background: #000;
+      border-radius: 12px;
+    }
+    a { color: #9aa0a6; font-size: 14px; text-decoration: none; }
+    a:hover { color: #e8e8ea; }
+  </style>
+</head>
+<body>
+  <main>
+    <video src="final.mp4" poster="poster.jpg" controls playsinline preload="metadata"></video>
+    <a href="final.mp4" download>영상 내려받기</a>
+  </main>
+</body>
+</html>
